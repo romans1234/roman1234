@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Roman | Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="https://lh3.googleusercontent.com/a-/AOh14GjvJ4J1DXVMKFae4AT3BBYlgxsiCkqBlWOhhT7KyA=s432-p-rw-no">
+<script src="https://kit.fontawesome.com/f6fc1b27c4.js" crossorigin="anonymous"></script>
+   
+    <meta charset="UTF-8">
+
+  </head>
+  <body>
+    <main>
+      <div class="wrapper">
+        <div class="content">
+     <div class="avatar-container">  <img src="https://lh3.googleusercontent.com/a-/AOh14GjvJ4J1DXVMKFae4AT3BBYlgxsiCkqBlWOhhT7KyA=s432-p-rw-no" class="avatar"></div> <div class="waviy"><span>R</span><span>O</span><span>M</span><span>A</span><span>N</span>&nbsp;</div>
+<h3  class="animate-charcter">Web Designer | Coder | Artist</h3>
+          <p style="color:white;">"Want to work together? Let's get started! Below are the ways to contact me"</p>
+<div class='social-container'><a target="_blank" href="https://dev.to/roman_22c01bcfb71"><i style="font-size:50px;" class="fa-brands fa-dev"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="mailto:geek.animator.studio@gmail.com"><i style="font-size:50px;" class="fa-solid fa-envelope"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;<a target="_blank" href="https://github.com/romans1234"><i style="font-size:50px;" class="fa-brands fa-github"></i></a></div>          
+<br>
+         <a target="_blank" href="https://scratch.mit.edu/users/Geek-Animator/"> <button  class="glow-on-hover"> 🐱 Visit me on Scratch</button></a>
+                <br>
+          <a target="_blank" href="https://dev.to/roman_soobben_22c01bcfb71/best-designing-tools-51ml"> <button  class="glow-on-hover">🔎 Best Designing Tools</button></a>
+          <br>
+          <p style="color:white; font-size:20px;">"I'm a Coder from California, I know JS, HTML, CSS, SQL, Python, JSON. I love the piano and nature."</p>
+         <br>
+          <p style="color:white; font-size:20px;">"I can do any project, I can create drawings, gifs, and photo edit, I can create a video and I'm always available"</p>
+        <br>
+        </div>
+      </div>
+    </main>
+    <div class="like">
+      <button class="like-btn"  onclick="onclickLiked()">Did you like this website?<i class="fa-solid fa-heart" id="like-btn"></i></button>
+      </div>
+<style>
+
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&display=swap");
+
+:root {
+
+  --wrapper-height: 80vh;
+  --avatar-max-width: 140px;
+
+  /* Fonts for different elements */
+  --font-family: "Comfortaa", cursive;
+  --font-family-header: "Comfortaa", cursive;
+  --font-family-list: monospace;
+
+  /* Colors you'll see cascade through the elements */
+
+  /* To set your own use custom-theme.css with `custom-theme` in settings.json `theme` property */
+  --color-bg: #bdbdbd; /* Used for the page body background */
+  --color-bg-alt: #ffffff; /* Used for social icons on hover */
+  --color-text-main: #000000; /* List text ann social icons on hover */
+  --color-primary: #ffffff; /* Headers and borders */
+
+  /* These are some Glitch colors you are welcome to use! */
+  --glitch-blue: #2800ff;
+  --glitch-blue-light: #5a78ff;
+  --glitch-pink: #ff7698;
+  --glitch-pink-light: #fec1ee;
+  --glitch-green: #05f293;
+  --glitch-green-light: #9be7d8;
+  --glitch-yellow: #ffff60;
+  --glitch-purple: #9480ff;
+}
+.animate-charcter
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+      font-size: 20px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+/* Basic page style resets */
+* {
+  box-sizing: border-box;
+}
+[hidden] {
+  display: none !important;
+}
+
+/* Page structure */
+body {
+  font-family: var(--font-family);
+  background-color: black;
+  text-align: center;
+  color: dodgerblue;
+}
+.wrapper {
+  min-height: var(--wrapper-height);
+  place-items: center;
+  margin: 3rem 2rem 0;
+}
+.content {
+   display: flex;
+  flex-direction: column;
+  width:5  display: flex;
+  flex-direction: column;
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+/* The footer and our remix on glitch button */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem auto 0;
+  padding: 1rem 0 0.75rem 0;
+  width: 100%;
+  flex-wrap: wrap;
+  border-top: 4px solid #fff;
+}
+.footer a:hover,
+.footer a:focus {
+  background: var(--color-primary);
+}
+.footer .tagline {
+  padding: 0.25rem 1rem 1rem;
+  text-align: left;
+  white-space: nowrap;
+}
+.btn--remix {
+  font-family: Menlo, Consolas, Monaco, "Lucida Console", monospace;
+  padding: 0.8rem 1.75rem;
+  /*font sizes scaled by viewport https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/*/
+  font-size: clamp(0.9rem, 0.825rem + 0.3333vw, 1rem);
+  line-height: 1rem;
+  font-weight: 500;
+  height: 3rem;
+  align-items: center;
+  cursor: pointer;
+  background: #ffffff;
+  border: 2px solid #000000;
+  box-sizing: border-box;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #000;
+  white-space: nowrap;
+  margin-left: auto;
+  margin-right: 1rem;
+}
+.btn--remix img {
+  position: relative;
+  top: 1px;
+  margin-right: 0.25rem;
+}
+.btn--remix:hover,
+.btn--remix:focus {
+  background-color: #d0fff1;
+}
+.tagline {
+  font-size: clamp(1rem, 0.925rem + 0.3333vw, 1.1rem);
+}
+
+/* Typography */
+p {
+  margin: 0 0 1rem 0;
+  line-height: 1.5 !important;
+  font-size: clamp(1rem, 0.25rem + 3.3333vw, 2rem);
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 2rem 0 0.8rem;
+  font-family: var(--font-family-header);
+  font-weight: bold;
+  line-height: 1.1;
+  color: var(--color-text-main);
+}
+h1 {
+  margin-top: 1rem;
+  margin-bottom: 1.25rem;
+  font-size: clamp(2rem, -0.875rem + 8.333vw, 4rem);
+  display: inline-flex;
+  color: var(--color-primary);
+  justify-content: center;
+}
+ul > li,
+ol > li {
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+  font-size: clamp(1rem, 0.625rem + 1.6667vw, 1.5rem);
+}
+ul {
+  padding: 0 0 0 18px;
+  margin: 0;
+}
+
+/* Link styles */
+/******************************************************************************
+END Page structure and element resets
+******************************************************************************/
+
+/******************************************************************************
+START Glitch in Bio default theme
+
+You can create your own CSS file in public/styles/themes
+Select your chosen CSS by adding the theme name (e.g. glitch) in settings.json
+******************************************************************************/
+
+/* Image specified in settings.json avatarImage property */
+.avatar-container {
+  display: flex;
+  justify-content: center;
+}
+.avatar {
+  max-width: var(--avatar-max-width);
+  max-height: var(--avatar-max-width);
+  margin: 1rem 0 1.5rem;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+/* Link list content specified in settings.json links array */
+ul.link-list {
+  margin: 0.5em 0 2.5rem;
+  padding-left: 0px;
+  
+}
+ul.link-list li {
+  font-family: 'Comfortaa',cursive;
+  font-weight: 100;
+  list-style: none;
+  clear: both;
+  width: 100%;
+  min-width: 100%;
+  text-align: center;
+  margin: 1rem auto;
+  font-size: clamp(0.7rem, 0.325rem + 1.6667vw, 1.2rem);
+
+ 
+}
+ul.link-list li a {
+  min-height: 5.5em;
+  min-width: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: center;
+  color:white;
+}
+ul.link-list li a:link,
+ul.link-list li a:visited {
+  text-align: center;
+  border: 2px solid var(--color-primary);
+  padding: 1.5rem;
+  position: relative;
+}
+ul.link-list li a img {
+  z-index: 1;
+  aspect-ratio: 1 / 1;
+  height: 3em;
+  object-fit: cover;
+  overflow: hidden;
+}
+ul.link-list li a span {
+  z-index: 2;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Social media icons */
+/* Page will display all icons that have a value in settings.json social object */
+.social-icons {
+  justify-content: center;
+  color:white;
+}
+.social-icons a:link {
+  border-bottom: none;
+  background: transparent;
+  width: 3rem;
+  height: 3rem;
+  margin: 0 0.5rem 1.5rem;
+}
+.social-profile-icon {
+  width: 40px;
+  margin-bottom: 1rem;
+  display: inline-flex;
+}
+/* Image paths specified in layout/social.html */
+.social-profile-icon path {
+   fill: #ebedf4!important;
+}
+.social-profile-icon:hover path,
+.social-profile-icon:focus path {
+  fill:white;
+  cursor:pointer;
+}
+li:hover {
+  transform: translateY(-2px);
+}
+
+li:active {
+  transform: translateY(0px);
+}
+
+/* Video aspect ratio helper */
+.video-wrapper__16-9 iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+.glow-on-hover{
+   width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+a{
+  color:white;
+  text-decoration:none;
+  text-transform: uppercase;
+}
+.waviy {
+  position: relative;
+  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
+  font-size: 35px;
+}
+.waviy, span {
+  font-family: 'Comfortaa', cursive;
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  text-transform: uppercase; 
+}
+.fa-heart{
+  color:pink;
+  font-size:20px;
+  cursor:pointer;
+}
+.fa-heart:hover{
+  color:red;
+}
+.like-btn{
+  border-radius:8px;
+  border:none;
+  width:100px;
+  text-align:left;
+  position: fixed;
+    bottom: 0px;
+    right: 0px; 
+
+
+}
+</style>
+<script>
+  var likes;
+ function onclickLiked(){
+ document.getElementById('like-btn').style.color="red";
+ likes = likes + 1;
+ }
+  </script>
+  </body>
+</html>
